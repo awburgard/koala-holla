@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Koalla Holla</title>
+    <script src="vendors/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="vendors/sweetalert.min.js"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <header>
+            <img src="./images/koalaBoy.svg" alt="Boy Koala" height="120px" width="120px" />
+            <h2>Koala Holla</h2>
+            <h5>1976 Llama Comma Drive</h5>
+            <h5>Walla Walla, WA</h5>
+          </header>
+
+          <div class="form">
+            <section id="addKoala">
+              <div >
+                <h4>Add Koala</h4>
+              </div>
+
+              <div class="input-group">
+                <label for="nameIn">Name:</label>
+                  <input type="text" id="nameIn" value="" placeholder="Name">
+              </div>
+
+              <div class="input-group">
+                <label for="ageIn">Age:</label>
+                  <input type="text" id="ageIn" value="" placeholder="Age">
+              </div>
+
+              <div class="input-group">
+                <label for="genderIn">Gender:</label>
+                  <select id="genderIn">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+              </div>
+
+              <div class="input-group">
+                <label for="readyForTransferIn">Ready For Transfer:</label>
+                  <select id="readyForTransferIn">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+              </div>
+
+              <div class="input-group">
+                <label for="notesIn">Notes:</label>
+                  <input type="text" id="notesIn" value="" placeholder="Notes">
+              </div>
+
+              <div class="input-group">
+                <button type="button" id="addButton">Add Koala</button>
+              </div>
+
+            </section>
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <section>
+            <h2>All Koalas</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Gender</th>
+                  <th>Ready for Transfer</th>
+                  <th>Notes</th>
+                  <th>Mark Ready</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody id="viewKoalas">
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
