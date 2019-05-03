@@ -37,10 +37,6 @@ function getKoalas(){
 
 function saveKoala( newKoala ){
   // ajax call to server to get koalas
-  swal("Good job!", "Your Koala has been added!", "success", {
-    button: "Aww yiss!",
-  });
-
   $.ajax({
     type: 'POST',
     url: '/koalas',
@@ -52,7 +48,16 @@ function saveKoala( newKoala ){
     $('#readyForTransferIn').val('Yes');
     $('#notesIn').val('');
 
+    swal("Good job!", "Your Koala has been added!", "success", {
+      button: "Aww yiss!",
+    });
+
     getKoalas(response);
+
+  }).catch(function (response) {
+    swal("Crap!", "There was an error saving your Koala!", "error", {
+      button: "Boo!",
+    });
   });
 }
 
